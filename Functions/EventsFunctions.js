@@ -33,12 +33,12 @@ class EventFunctions {
 		}
 	}
 	async GuildMemberAdd(Bot, NewMember) {
+		if (!BOTSettings.GuildMemberAdd) return;
 		NewMember.user.fetch().then(Member => {
 			var ChartedNewMember = {
 				Avatar: Member.avatarURL({ dynamic: true }),
 				Banner: Member.bannerURL({ dynamic: true }),
 				Bot: Member.bot,
-				Discriminator: Member.discriminator,
 				Username: Member.username,
 				Joined: NewMember.joinedAt,
 				Created: Member.createdAt,
@@ -49,7 +49,7 @@ class EventFunctions {
 			// Finish Discord Embed and Make Slash Command to Enable Verification of User being Roled.
 			var DiscordEmbed = new Dependencies.Discord.MessageEmbed()
 			.setAuthor({ name: `NEW MEMBER.`, iconURL: `${BOT.user.avatarURL({ dynamic: true })}`, url: `${BOTUrl}` })
-			.setDescription(`${ChartedNewMember.Username}#${ChartedNewMember.Discriminator} is currently awaiting authentication to join the server. To verify, please use the slash command with the user selected, or manually role them.`)
+			.setDescription(`${ChartedNewMember.Username} is currently awaiting authentication to join the server. To verify, please use the slash command with the user selected, or manually role them.`)
 			.setColor(BOTColor)
 			.setThumbnail(`${ChartedNewMember.Avatar}?size=512`) //.setImage(`${ChartedNewMember.Banner}?size=2048`)
 			.addFields(
@@ -68,7 +68,8 @@ class EventFunctions {
 		})
 	}
 	async GuildMemberRemove(Bot, Member) {
-		
+		if (!BOTSettings.GuildMemberRemove) return;
+
 	}
 	
 }
