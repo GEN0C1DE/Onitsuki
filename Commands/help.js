@@ -10,13 +10,10 @@ module.exports = {
 	.setThumbnail(BOT.guilds.resolve(BOTServerID).members.resolve(BOT.user.id).user.avatarURL())
 	.setImage("https://i.pinimg.com/600x315/a5/30/21/a53021b57246780a94306c694b05f0b9.jpg")
 	.addFields(
-		{ name: '**CHIEF EXECUTIVE OFFICER**', value: `*GENOCIDE*`, inline: false},
-		{ name: '**CHIEF OPERATIONS OFFICER**', value: `*PURGE*`, inline: false},
-		{ name: '**CHIEF ADMINISTATIVE OFFICER**', value: `*BOOT*`, inline: false},
-		{ name: '**CHIEF COMMUNICATIONS OFFICER**', value: `*YOUNG*`, inline: false},
+		{ name: '**DEVELOPER**', value: `*x695*`, inline: false},
 		{ name: '**CREATED?**', value: `*12 MARCH 2022.*`, inline: true},
 		{ name: '**CAPACITY?**', value: `*LOW.*`, inline: true},
-		{ name: '**SERVER HEADS?**', value: `*BOARD OF DIRECTORS.*`, inline: true}
+		{ name: '**BOT STATUS**', value: `*VERSION: 0.001 WIP.*`, inline: true}
 	)		
 	.setFooter('*This menu will be deleted in 30 seconds.*')
 	.setTimestamp();
