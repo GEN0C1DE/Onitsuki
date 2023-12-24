@@ -15,6 +15,19 @@ class Onitsuki {
 			Events: Dependencies.Path.join(__dirname, "Events"),
 		}
 		global.BOTName = ""
+		global.BOTGuilds = {
+			/* Example Guild Database Future
+			[289328939309302932]: {
+				GuildMemberAdd: true,
+				GuildMemberFalse: false,
+				GuildIsVIP: false,
+				GuildLogChannel: *ID*,
+				GuildMusicQueue: []
+			}
+			*/
+			GuildMemberAdd: true,
+			GuildMemberRemove: false,
+		}
 		global.BOT = undefined
 		global.BOTToken = ""
 		global.BOTServerID = ""
