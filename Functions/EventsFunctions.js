@@ -49,7 +49,7 @@ class EventFunctions {
 			// Finish Discord Embed and Make Slash Command to Enable Verification of User being Roled.
 			var DiscordEmbed = new Dependencies.Discord.MessageEmbed()
 			
-			if (Value == false) {
+			if (Value == true) {
 				DiscordEmbed.setAuthor({ name: `MEMBER JOINED.`, iconURL: `${BOT.user.avatarURL({ dynamic: true })}`, url: `${BOTUrl}` })
 				DiscordEmbed.setDescription(`${ChartedNewMember.Username} is currently awaiting authentication to join the server. To verify, please use the slash command with the user selected, or manually role them.`)
 				DiscordEmbed.addFields(
